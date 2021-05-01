@@ -13,7 +13,7 @@ int main(void)
 	//////////////// AP HASH
 	printf("AP HASH\n");
 	char *data = "Ondokuz Mayıs Üniversitesi";
-	unsigned int value = APHash(data, 40);
+	unsigned int value = APHash(data);
 	printf("input: %s\n", data);
 	printf("output: %d\n", value);
 
