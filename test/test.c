@@ -7,6 +7,7 @@
 #include "xor_linked_list.h"
 #include "bitonic_sort.h"
 #include "redblack_tree.h"
+#include "quickSort.h"
 
 int main(void)
 {
@@ -79,6 +80,26 @@ int main(void)
 
 	printf("ELemanlar: ");
 	inorderTraversal(root);
+	printf("\n");
+
+	//////////////////////////////////////////////////////////////////////////////////////////////// QUICK SORT
+	printf("\nQUICK SORT\n");
+
+	int arr[10]; //siralanacak dizi
+	for (int i = 0; i < 10; i++)
+	{
+		arr[i] = rand() % 50;
+	}
+
+	int size = sizeof(arr) / sizeof(arr[0]);
+	printf("Dizinin ilk hali = ");
+	printArray(arr, size);
+	printf("\n");
+
+	quickSort(arr, 0, (size - 1)); //siralama işlemi
+
+	printf("Siralanmis dizi = ");
+	printArray(arr, size);
 	printf("\n");
 
 	return 0;
