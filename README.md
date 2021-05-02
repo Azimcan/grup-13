@@ -5,5 +5,5 @@ make
 
 # Run
 ```
-./test/test
+./test1
 ```
