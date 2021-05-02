@@ -1,25 +1,31 @@
 CC = gcc
 
-CFLAGS = -Wall -Werror -I. -L.
+CFLAGS = -Wall -I./include -L./lib
 
-SRCS = $(wildcard *.c)
+SRCDIR = src
+OBJDIR = obj
 
-OBJS = $(SRCS:%.c=%.o)
+SRCS = $(wildcard $(SRCDIR)/*.c)
+OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 TESTS = $(wildcard test/*.c)
 TOBJS = $(TESTS:%.c=%)
 
-all: $(TOBJS)
+# .PHONY = all clean lib
 
-lib: $(OBJS)
-	ar rcs libtests.a $^
-	ranlib libtests.a
+all: test1
 
-%: %.c lib
+lib/libtests.a: $(OBJS)
+	@mkdir -p lib
+	ar rcs lib/libtests.a $^
+	ranlib lib/libtests.a
+
+test1: test/test.c lib/libtests.a
 	$(CC) $(CFLAGS) $< -o $@ -ltests
 
-%.o: %.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $< -c -o $@
 
 clean:
-	rm *.o test/test libtests.a
+	@rm -rf test1 lib $(OBJDIR)

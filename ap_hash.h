@@ -1,1 +1,0 @@
-unsigned int APHash(char *str);

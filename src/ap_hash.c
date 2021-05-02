@@ -1,4 +1,5 @@
 #include <string.h>
+#include "ap_hash.h"
 
 unsigned int APHash(char *str)
 {

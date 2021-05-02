@@ -13,13 +13,7 @@ Bu şekilde ilgili düğümden sonra gelen düğümün adresine erişilebilir.
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Node
-{
-
-    int data;
-    struct Node *xp; //Xor işlemi endeksli bağlantı pointerları
-};
+#include "xor_linked_list.h"
 
 struct Node *XOR(struct Node *a, struct Node *b) //XOR işleminin yapıldığı fonksiyon.
 {
