@@ -1,5 +1,4 @@
-struct Node *XOR(struct Node *x, struct Node *y);
-
-void traverse(struct Node *head);
-
-void push(struct Node **head, int data);
+struct Node *XOR(struct Node *a, struct Node *b);
+struct Node *addNode_xorList(struct Node **head, int value);
+struct Node *deleteNode_xorList(struct Node **head);
+void print_xorList(struct Node **head);

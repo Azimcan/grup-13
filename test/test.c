@@ -19,15 +19,20 @@ int main(void)
 
 	//////////////// XOR LINKED LIST
 	printf("\nXOR LINKED LIST\n");
-	// Size
-	int n = 5;
-
 	struct Node *head = NULL;
-	for (int i = n - 1; i >= 0; i--)
-	{
-		push(&head, rand() % 20);
-	}
+	addNode_xorList(&head, 10);
+	addNode_xorList(&head, 20);
+	addNode_xorList(&head, 30);
+	addNode_xorList(&head, 40);
 
-	traverse(head);
+	print_xorList(&head);
+
+	deleteNode_xorList(&head);
+
+	print_xorList(&head);
+
+	deleteNode_xorList(&head);
+
+	print_xorList(&head);
 	printf("\n");
 }
