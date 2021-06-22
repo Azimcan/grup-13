@@ -1,0 +1,5 @@
+- Derleme işlemi için 'make' komutu kullanılır.
+
+- Çalıştırmak için derleme sonrası ana dizinde oluşan test1 dosayasını çalıştırın.
+
+- İsteğe bağlı, derleme işlemini temizlemek için 'make clean' komutu kullanılabilir.
