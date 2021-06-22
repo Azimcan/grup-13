@@ -1,9 +1,14 @@
-# Compile
+## Compile
 ```
 make
 ```
 
-# Run
+## Run 
 ```
 ./test1
+```
+
+## Clean
+```
+make clean
 ```
